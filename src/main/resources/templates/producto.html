@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title class="title">Producto</title>
+    <link rel="stylesheet" href="styles/producto.css">
+</head>
+<body>
+<div th:insert="~{parts/navigation::navigation}"></div>
+
+<h1 class="titulo">Mi Tienda</h1>
+
+<a  class="atras" type="submit" href="/">Regresar</a>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-4 col-sm-6" th:each="producto : ${listaRopas}">
+            <div class="producto">
+                <img th:src="@{/imagenropa/{imagene}(imagene=${producto.imagene})}" alt="Imagen de la Ropa" class="imagen">
+                <p class="nombre">Nombre: <span class="mysql"  th:text="${producto.nombre}"></span></p>
+                <p class="talla">Talla S: <span class="mysql" th:text="${producto.tallaS}"></span></p>
+                <p class="talla">Talla M: <span class="mysql"  th:text="${producto.tallaM}"></span></p>
+                <p class="talla">Talla XL: <span class="mysql"  th:text="${producto.tallaXL}"></span></p>
+                <p class="precio">Precio: <span class="mysql"  th:text="${producto.precio}"></span></p>
+                <button class="agregar-button">Agregar al Carrito</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
+
+

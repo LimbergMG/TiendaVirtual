@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>USUARIO</title>
+    <link rel="stylesheet" type="text/css" href="styles/crudusu.css">
+
+</head>
+<body>
+<div th:insert="~{parts/navigation::navigation}"></div>
+
+<h1 class="title">Usuario <span th:text="${userLogin}"></span></h1>
+
+
+
+<a  class="login-button" type="submit" href="/login">Cerrar Sesion</a>
+
+
+<h1>CRUD de Ropa</h1>
+//ffffffffffffffffffff
+<!-- Botón para agregar ropa -->
+<a href="/add" class="button">Agregar Ropa</a>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Talla S</th>
+        <th>Talla M</th>
+        <th>Talla XL</th>
+        <th>Precio</th>
+        <th>Imagen</th>
+        <th>Acciones</th>
+    </tr>
+
+    <tr th:each="ropa : ${listaRopas}">
+        <td th:text="${ropa.id}"></td>
+        <td th:text="${ropa.nombre}"></td>
+        <td th:text="${ropa.tallaS}"></td>
+        <td th:text="${ropa.tallaM}"></td>
+        <td th:text="${ropa.tallaXL}"></td>
+        <td th:text="${ropa.precio}"></td>
+        <td>
+            <img th:src="@{/imagenropa/{imagene}(imagene=${ropa.imagene})}" alt="Imagen de la Ropa"/>
+        </td>
+        <td>
+            <a th:href="@{'/editar/' + ${ropa.id}}" class="editar-button button">Editar</a>
+            <a th:href="@{'/eliminar/' + ${ropa.id}}" class="eliminar-button button">Eliminar</a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
+
+

@@ -1,0 +1,105 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo img {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+}
+
+.contact-info {
+    margin-top: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+/* Estilos del contenido principal */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #ffc107;
+}
+
+blockquote {
+    background-color: #444;
+    padding: 10px;
+    border-left: 3px solid #ffc107;
+    margin-bottom: 10px;
+}
+
+blockquote p {
+    color: #fff;
+}
+
+blockquote footer {
+    color: #ccc;
+}
+
+/* Estilos del formulario de comentarios */
+form {
+    background-color: #444;
+    padding: 20px;
+}
+
+form label {
+    color: #ffc107;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #666;
+    background-color: #333;
+    color: #fff;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #ffc107;
+}
+
+form button[type="submit"] {
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}

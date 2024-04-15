@@ -1,0 +1,12 @@
+.dropdown-menu li a {
+    color: #ffffff; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    padding: 8px 12px; /* Espaciado interno */
+    display: block; /* Mostrar como bloque */
+}
+
+/* Estilo cuando se pasa el mouse sobre los enlaces */
+.dropdown-menu li a:hover {
+    background-color: #333333; /* Color de fondo al pasar el mouse */
+}
+

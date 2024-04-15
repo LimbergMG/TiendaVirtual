@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Ropa</title>
+    <link rel="stylesheet" href="styles/add.css">
+</head>
+<body>
+<div th:insert="~{parts/navigation::navigation}"></div>
+
+<div class="container">
+
+
+    <form th:action="@{/add}" method="post" enctype="multipart/form-data">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="tallaS">Talla S Cantidad:</label>
+        <input type="number" id="tallaS" name="tallaS">
+
+        <label for="tallaM">Talla M Cantidad:</label>
+        <input type="number" id="tallaM" name="tallaM">
+
+        <label for="tallaXL">Talla XL Cantidad:</label>
+        <input type="number" id="tallaXL" name="tallaXL">
+
+        <label for="precio">Precio:</label>
+        <input type="text" id="precio" name="precio">
+
+        <label for="imagen">Imagen:</label>
+        <input type="file" id="imagen" name="imagen">
+
+        <input type="submit" value="Agregar Producto">
+    </form>
+</div>
+
+</body>
+</html>
